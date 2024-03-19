@@ -1,0 +1,55 @@
+.NavHeader{
+    display:flex;
+    padding:0.1rem;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    z-index: 10;
+}
+.NavLink{
+    display:flex;
+}
+
+.NavLink li{
+    padding:0 1rem;
+    font-size: 25px;
+    font-weight: bold;
+} 
+
+.Hamburger{
+    display: none;
+}
+.NavHeader-Change{
+    background-color: rgba(0, 0, 0, 0.85);
+    transition: 0.7s;
+}
+
+@media screen and (max-width:1040px) {
+
+ .NavLink{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background:rgba(0, 0, 0, 0.96);
+    position: absolute;
+    z-index: -3;
+    top: 0;
+    left: -100%;
+    transition: 0.5s;
+ }
+ .NavLink.active{
+    left: 0;
+}
+ .NavLink li{
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+ }
+ .Hamburger{
+    display: initial;
+}
+}
